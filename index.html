@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusConnect | Student Placement Portal</title>
+  <style>
+    :root {
+      --navy: #132544;
+      --blue: #315efb;
+      --ink: #18243b;
+      --muted: #68758a;
+      --line: #e5eaf2;
+      --bg: #f7f9fc;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .hero {
+      background: linear-gradient(120deg, #10203d, #214d8b);
+      color: white;
+      padding: 22px max(6%, calc((100% - 1120px) / 2)) 72px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid #ffffff35;
+      padding: 8px 0 20px;
+    }
+    nav strong { font-size: 1.2rem; }
+    nav span { color: #d6e3ff; font-size: .92rem; }
+    .hero-content { padding: 52px 0 0; max-width: 650px; }
+    .eyebrow {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      color: #6685ff;
+      margin: 0 0 8px;
+    }
+    .hero .eyebrow { color: #b9caff; }
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.08;
+      margin: 8px 0 18px;
+      letter-spacing: -.04em;
+    }
+    .hero-content > p:not(.eyebrow) { color: #dbe5f7; max-width: 540px; }
+    .button {
+      display: inline-block;
+      background: white;
+      color: #183c8a;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+    .container { max-width: 1120px; margin: auto; padding: 0 22px; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: -30px;
+      position: relative;
+    }
+    .stats article, .card, .drive, .notice {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 8px 25px #172b4d08;
+    }
+    .stats strong { display: block; font-size: 1.7rem; color: var(--blue); }
+    .stats span { font-size: .88rem; color: var(--muted); }
+    section { margin: 48px 0; }
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+    .section-heading h2, .notice h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      letter-spacing: -.03em;
+    }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .company-mark {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+    .blue { background: #e6edff; color: #315efb; }
+    .purple { background: #f0e8ff; color: #7849c8; }
+    .orange { background: #fff0df; color: #c56a15; }
+    .card h3 { margin: 16px 0 3px; }
+    .card p, .drive p, .notice p { color: var(--muted); margin: 4px 0 12px; }
+    .tag {
+      display: inline-block;
+      background: #eef3ff;
+      color: #3555b4;
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-size: .78rem;
+    }
+    .drive {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin: 12px 0;
+    }
+    .drive h3 { margin: 0; }
+    .drive-meta { text-align: right; min-width: 120px; }
+    .drive-meta strong, .drive-meta span { display: block; }
+    .drive-meta strong { color: var(--blue); }
+    .drive-meta span { font-size: .86rem; color: var(--muted); }
+    .notice { background: #edf3ff; border-color: #d9e4ff; box-shadow: none; }
+    .notice p { max-width: 680px; margin-bottom: 0; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+      padding: 28px 20px;
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 760px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .cards { grid-template-columns: 1fr; }
+      .drive { align-items: flex-start; flex-direction: column; }
+      .drive-meta { text-align: left; }
+      .hero { padding-bottom: 58px; }
+      nav span { font-size: .78rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <strong>CampusConnect</strong>
+      <span>University Placement Cell</span>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">CAREERS START HERE</p>
+      <h1>Your next opportunity<br>starts on campus.</h1>
+      <p>Explore recruitment drives, discover employers, and prepare for your career.</p>
+      <a class="button" href="#drives">Explore drives</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats" aria-label="Placement statistics">
+      <article><strong>92%</strong><span>Eligible students placed</span></article>
+      <article><strong>148</strong><span>Recruiting companies</span></article>
+      <article><strong>₹12.4 LPA</strong><span>Highest package</span></article>
+      <article><strong>840+</strong><span>Offers this season</span></article>
+    </section>
+
+    <section aria-labelledby="companies-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">EMPLOYERS</p><h2 id="companies-heading">Featured companies</h2></div>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="company-mark blue">T</div>
+          <h3>TechNova</h3><p>Software &amp; cloud services</p>
+          <span class="tag">Engineering</span>
+        </article>
+        <article class="card">
+          <div class="company-mark purple">I</div>
+          <h3>InfiCore</h3><p>Consulting &amp; technology</p>
+          <span class="tag">IT Services</span>
+        </article>
+        <article class="card">
+          <div class="company-mark orange">A</div>
+          <h3>Analytics Bay</h3><p>Data &amp; business intelligence</p>
+          <span class="tag">Analytics</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="drives" aria-labelledby="drives-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">DON'T MISS OUT</p><h2 id="drives-heading">Upcoming recruitment drives</h2></div>
+      </div>
+      <article class="drive">
+        <div><h3>Graduate Software Engineer</h3><p>TechNova · B.E./B.Tech CSE, IT, ECE · Minimum 7.0 CGPA</p></div>
+        <div class="drive-meta"><strong>₹8–12 LPA</strong><span>22 Oct 2026</span></div>
+      </article>
+      <article class="drive">
+        <div><h3>Associate Analyst</h3><p>Analytics Bay · Eligible branches · No active backlogs</p></div>
+        <div class="drive-meta"><strong>₹5–7 LPA</strong><span>27 Oct 2026</span></div>
+      </article>
+      <article class="drive">
+        <div><h3>Technology Consultant</h3><p>InfiCore · B.E./B.Tech and MCA · Minimum 6.5 CGPA</p></div>
+        <div class="drive-meta"><strong>₹6–9 LPA</strong><span>03 Nov 2026</span></div>
+      </article>
+    </section>
+
+    <section class="notice">
+      <p class="eyebrow">PLACEMENT CELL NOTICE</p>
+      <h2>Keep your profile ready</h2>
+      <p>Review each drive's eligibility criteria and bring your updated resume to placement activities.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 CampusConnect · University Placement Cell · Student project demonstration</footer>
+</body>
+</html>
