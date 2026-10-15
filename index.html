@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusPulse | College Events</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="hero"><nav><a class="brand" href="#">Campus<span>Pulse</span></a><span>College Events · 2026</span></nav><div class="hero-copy"><p class="eyebrow">MAKE YOUR CAMPUS COUNT</p><h1>Find your people.<br>Build something brilliant.</h1><p>Explore symposiums, hackathons, workshops, and cultural events happening on campus.</p><a class="button" href="#events">Explore events ↓</a></div><div class="hero-orb orb1"></div><div class="hero-orb orb2"></div></header>
+  <main class="container">
+    <section class="intro-row"><div><p class="eyebrow">WHAT'S HAPPENING</p><h2>Upcoming events</h2><p>Pick an event, check the details, and register your interest.</p></div><select id="filter" aria-label="Filter events"><option value="All">All event types</option><option>Technical</option><option>Workshop</option><option>Cultural</option><option>Competition</option></select></section>
+    <section id="events" class="event-grid">
+      <article class="event-card" data-type="Technical"><div class="event-art art1"><span>TECH FEST</span><strong>01</strong></div><div class="event-body"><span class="tag">Technical</span><h3>InnovateX Symposium</h3><p>Talks, demos, and student-built technology projects.</p><div class="meta"><span>📅 24 Oct 2026</span><span>📍 Main Auditorium</span></div><div class="event-footer"><span>Seats: 180 / 250</span><button class="button register" data-event="InnovateX Symposium">Register interest</button></div></div></article>
+      <article class="event-card" data-type="Competition"><div class="event-art art2"><span>BUILD • SHIP</span><strong>24H</strong></div><div class="event-body"><span class="tag">Competition</span><h3>Campus Hackathon</h3><p>Team up to prototype a solution to a real-world problem.</p><div class="meta"><span>📅 31 Oct 2026</span><span>📍 Innovation Lab</span></div><div class="event-footer"><span>Seats: 72 / 100</span><button class="button register" data-event="Campus Hackathon">Register interest</button></div></div></article>
+      <article class="event-card" data-type="Workshop"><div class="event-art art3"><span>LEARN BY DOING</span><strong>WS</strong></div><div class="event-body"><span class="tag">Workshop</span><h3>Cloud & DevOps Lab</h3><p>Get hands-on with containers, CI/CD, and deployment basics.</p><div class="meta"><span>📅 05 Nov 2026</span><span>📍 Lab Block B</span></div><div class="event-footer"><span>Seats: 34 / 60</span><button class="button register" data-event="Cloud & DevOps Lab">Register interest</button></div></div></article>
+      <article class="event-card" data-type="Cultural"><div class="event-art art4"><span>CAMPUS CULTURE</span><strong>26</strong></div><div class="event-body"><span class="tag">Cultural</span><h3>Rhythm & Roots</h3><p>An evening of music, dance, food, and student performances.</p><div class="meta"><span>📅 12 Nov 2026</span><span>📍 Open-Air Theatre</span></div><div class="event-footer"><span>Seats: 310 / 500</span><button class="button register" data-event="Rhythm & Roots">Register interest</button></div></div></article>
+    </section>
+    <section class="coordinator"><div><p class="eyebrow">FOR STUDENT ORGANISERS</p><h2>Plan it. Promote it. Bring people together.</h2><p>Faculty coordinators can use this demo page to present event schedules, venues, and capacity information.</p></div><div class="coordinator-badge">EVENT<br>COORDINATION</div></section>
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+  </main>
+  <footer>© 2026 CampusPulse · College event website demonstration. Registrations are not saved to a server.</footer>
+</body>
+</html>
